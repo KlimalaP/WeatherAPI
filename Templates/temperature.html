@@ -1,0 +1,28 @@
+<html>
+    <head><title>Weather info</title></head>
+    <body style="background-color:#ADD8E6;">
+    <h1 align="center"> Weather in {{ city }}: {{ weatherDescription }}</h1>
+    <table width ="1200" align="center">
+      <tr>
+        <th>Temperature</th>
+        <th>{{temp}} C</th>
+          <td rowspan="3"><img src = http://openweathermap.org/img/wn/{{icon_code}}@2x.png > </td>
+      </tr>
+      <tr>
+        <th>Pressure</th>
+        <th>{{press}} hPa</th>
+      </tr>
+      <tr>
+        <th>Wind velocity</th>
+        <th> {{windVelocity}} m/s</th>
+      </tr>
+        <tr><th></th><th>
+         <form method="POST" action="/temperature/forecast">
+             <br><button type="submit">Forecast</button><br>
+         </form>
+        </th>
+        </tr>
+    </table>
+    <!{{idk}}>
+</body>
+</html>
